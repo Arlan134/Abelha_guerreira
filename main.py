@@ -11,8 +11,10 @@ class Main:
 
         self.loop = True
 
+        self.start_screen = Obj("assets\start.png", 0, 0)
+
     def draw(self):
-        pass
+        self.start_screen.drawing(self.window)
 
     def events(self):
         for events in pygame.event.get():
@@ -24,6 +26,10 @@ class Main:
             self.draw()
             self.events()
             pygame.display.update()
+
+
+game = Main(320, 640, "Abelha Guerreira")
+game.update()
 
 
 game = Main(320, 640, "Abelha Guerreira")
